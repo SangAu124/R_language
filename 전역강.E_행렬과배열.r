@@ -69,6 +69,7 @@ mat6 <- matrix(1:6, nrow = 2)
 mat7 <- matrix(c(2, 3, 4), nrow = 1)
 mat8 <- rbind(mat6, mat7)
 
+mat9 <- cbind(c(1, 2, 3), c(4, 5, 6))
 
 
 
