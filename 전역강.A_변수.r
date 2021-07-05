@@ -70,6 +70,7 @@ objects()
 objects(all.names = T)
 
 # rm(변수명)
+# remove(변수명)
 rm(x1)
 
 rm(list = ls())
