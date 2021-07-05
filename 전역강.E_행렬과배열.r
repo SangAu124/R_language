@@ -17,7 +17,8 @@ matrix(x, nrow = 2, ncol = 3, byrow = TRUE)
  # array(변수명, dim = c(행수, 열수, 차원수))
 
 
-
+y <- c(1, 2, 3, 4, 5, 6)
+array(y, dim = c(2, 2, 3))
 
 
 
