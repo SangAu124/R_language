@@ -65,6 +65,12 @@ length(mat1)
 # 벡터에서는 c()로 조합
 # 행렬에서는 rbind(), cbind()로 조합
 
+mat6 <- matrix(1:6, nrow = 2)
+mat7 <- matrix(c(2, 3, 4), nrow = 1)
+mat8 <- rbind(mat6, mat7)
+
+
+
 
 
 
