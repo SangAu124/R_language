@@ -71,6 +71,9 @@ mat8 <- rbind(mat6, mat7)
 
 mat9 <- cbind(c(1, 2, 3), c(4, 5, 6))
 
+# rbind(), cbind()는 데이터 프레인 에서고 사용 가능
+# 인자가 dataframe이면 dataframe 으로 조합
+
 
 
 
