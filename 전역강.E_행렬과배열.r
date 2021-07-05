@@ -20,17 +20,44 @@ matrix(x, nrow = 2, ncol = 3, byrow = TRUE)
 y <- c(1, 2, 3, 4, 5, 6)
 array(y, dim = c(2, 2, 3))
 
+#--------------------------------------------------------------
+
+# 1. 매트릭스 생성
+mat1 <- matrix(1:9, nrow = 3, ncol = 3)
+mat2 <- matrix(1:9, nrow = 3, ncol = 3, byrow = TRUE)
+mat1
+mat2
+
+mat3 <- matrix(1:8, nrow = 4)
+mat3
+
+mat4 <- matrix(0, nrow = 3, ncol = 3)
+mat4
+
+mat5 <- matrix(1, nrow = 3, ncol = 3)
+mat5
+
+# 2. 매트릭스 요소(멤버) 엑세스
+# m[i, j] 형태로 멤버에 접근
+
+mat1[2, 3] # 메트릭스 2행 3열에 접근
+mat1[2,]   # row vector == return vector --> 벡터를 리턴
+mat1[2, , drop = FALSE]# row vector == return vector --> 메트릭스를 리턴
 
 
+mat1[, 2] # column vector --> 벡터를 리턴
+mat1[, 2, drop = FALSE]   # column vector --> 메트릭스를 리턴
 
 
+mat1[1:2, 2:3] # submatrix
 
+#-----------------------------------------------------------------------------
+# 3. 행렬의 크기
+#nrow(), ncol(), dim()
 
-
-
-
-
-
+nrow(mat1)
+ncol(mat1)
+dim(mat1)
 
 
 
