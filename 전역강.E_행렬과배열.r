@@ -59,6 +59,25 @@ nrow(mat1)
 ncol(mat1)
 dim(mat1)
 
+length(mat1)
+
+# 4. 조합(컴비네이션)
+# 벡터에서는 c()로 조합
+# 행렬에서는 rbind(), cbind()로 조합
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
