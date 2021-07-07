@@ -2,7 +2,7 @@
 
 # 1. О©╫О©╫О©╫О©╫ rО©╫т╪О©╫
 # cos(x), sin(x), tan(x), sum(x), mean(x)
-# 2. О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ rО©╫т╪О©╫
+# 2. О©╫О©╫О©╫О©╫О©? О©╫О©╫О©╫О©╫ rО©╫т╪О©╫
 # function_name <- function(arguments){ function_body}
 
 #-------------------------------------------------------------------
@@ -23,12 +23,12 @@ show3 <- function(k, e, m){
 show4 <- function(k, e, m){
   avg <- (k + e + m) / 3
   if(avg >= 60)
-    return("О©╫у╟О©╫")
+    return("гу╟щ")
   else
-    return("О©╫О©╫О©╫у╟О©╫")
+    return("гу╟щ")
 }
 
-show1(1:3, c("О©╫О©╫", "О©╫О©╫", "О©╫О©╫"), seq(10.1, 10.3, 0.1), c(1:3))
+show1(1:3, c("╟║", "Ё╙", "╢ы"), seq(10.1, 10.3, 0.1), c(1:3))
 show2(95, 85, 73)
 x <- 1:6
 show3(matrix(x, nrow = 2, ncol = 3), matrix(x, nrow = 2, ncol = 3), matrix(x, nrow = 2))

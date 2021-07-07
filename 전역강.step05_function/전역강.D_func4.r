@@ -29,8 +29,15 @@ rs <- function(score){
     return(print("불합격"))
 }
 
-toeic <- 750
-it <- 65
+main <- function(){
+  toeic <- 750
+  it <- 65
+  
+  cat("입사총점 : ", total(toeic, it), "\n")
+  cat("입사결과 : ", rs(total(toeic, it)))
+}
+main()
 
-cat("입사총점 : ", total(toeic, it), "\n")
-cat("입사결과 : ", rs(total(toeic, it)))
+
+
+

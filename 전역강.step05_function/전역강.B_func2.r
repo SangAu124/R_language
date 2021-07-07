@@ -21,6 +21,8 @@ view5 <- function(){
 view6 <- function(){
   x <- 1:5
   y <- c("a", "b", "c", "d", "e")
+  z<-data.frame(x,y)
+  return(z)
 }
 
 view1()
@@ -28,7 +30,7 @@ view2()
 view3()
 view4()
 view5()
-
+view6()
 
 
 
