@@ -49,6 +49,64 @@ tail(baseball)
 # 사용할 수 있게 해줌. baseball$h를 h라고 적으면 됨...
 
 
+baseball
+
+
+# 
+dbp <- function(data){
+  c(OBP = with(data, sum(h + bb + hbp) / sum(ab + bb + hbp + sf)))
+}
+
+# ddply() 선수별 경력기간 동안 출루율 계산
+careerOBP <- ddply(baseball, .variables ="id", .fun = obp)
+#            ddply(데이터, 데이터를 그룹 지을 변수명, 사용할 함수)
+head(carrerOBP)
+
+
+# 결과(careerOBP)를 출루율에 대해 정렬
+careerOBP <- careerOBP[order(careerOBP$OBP, decreasing = TRUE),]
+head(carrerOBP, 10) # 상위 10위권 출루율을 가진 선수의 출루율
+
+#---------------------------------------------------------------------------
+# order(), sort()
+
+v1 <- c(40, 30, 50, 50, 90, 40, 50)
+v2 <- c(5100, 6500, 2000, 2000, 9000, 4500, 3000)
+v3 <- c("A", "B", "A", "B", "A", "A", "B")
+v123 <- data.frame(v1, v2, v3)
+v123
+
+# order() : 데이터프레임 정렬
+
+order(v1)
+
+v1[order(v1)]
+
+# sort()
+sort(v1) # 오름차순
+
+sort(v1, decreasing = TRUE) # 내림림차순
+
+# 데이터프레임 정렬
+rm(v1, v2, v3)
+attach(v123)
+
+
+v123_order <- v123[order(v1, -v2, v3),]
+v123_order
+
+# 데이터프레임 정렬은 행단위로 정렬
+# 동일한 값을 만나는 경우 다음 컬럼에 대하여 동일한 값을 만난 구간만 정렬
+
+# plry 패키지의 arrange()를 이용한 정렬도 결과는 같음
+library(plyr)
+arrange(v123, v1, desc(v2), v3)
+
+
+
+
+
+
 
 
 
