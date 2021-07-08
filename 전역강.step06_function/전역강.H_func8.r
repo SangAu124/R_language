@@ -25,4 +25,22 @@ floor(5.00)
 trunc(5.88)
 trunc(5.00)
 
-# 6. 
+# 6. round() : ¹Ý¿Ã¸²
+
+round(5.88, digits = 1)
+round(5.88, 0)
+round(5.88, digits = -1)
+round(4.88, digits = -1)
+
+# 7. factorial()
+
+factorial(5)
+factorial(2)
+factorial(3)
+
+
+
+
+
+
+
