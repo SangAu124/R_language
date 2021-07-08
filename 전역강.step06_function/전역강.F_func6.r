@@ -74,16 +74,32 @@ setkey(dia_dt, cut, color)
 
 tables()
 
+#-------------------------------------------------------------------------------
+# 데이터 테이블 집계
+
+# 인덱싱의 장점은 빠른 집계
+# aggregate() d*ply() 계열 함수도 데이터테이블이
+#데이터 프레임을 확장한 것이므로 데이터 테이블에 적용할 수 있지만
+# 데이터 테이블 내장 집계함수를 사용하는 것이 빠름
+
+diamonds
+
+aggregate(price ~ cut, diamonds, mean) # cut 별 price, 데이터프레임
+
+# 데이터테이블을 사용하여 같은 결과를 업고자 하는 경우
+dia_dt[, mean(price), by = cut] # 결과의 컬럼이 v1으로 나옴
+
+dia_dt[, list(price = mean(price)), by = cut] # aggregate()와 같은 열이름 표시
+
+dia_dt[, mean(price), by = list(cut, color)]
 
 
+dia_dt[, list(price = mean(price), carat = mean(carat)), by = cut]
 
+dia_dt[, list(price = mean(price), carat = mean(carat)), by = list(cut, color)]
 
-
-
-
-
-
-
+# 계산하고자 하는 여러개의 수치들과 복수의 그룹핑 변수들을 동시에 지정 가능
+dia_dt[, list(price = mean(price), carat = mean(carat), caratSum = sum(carat)), by = list(cut, color)]
 
 
 
