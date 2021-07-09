@@ -160,19 +160,15 @@ g <- g + scale_y_continuous(labels = comma)
 g <- g + labs(title = "인구 동향", x = "월", y = "인구")
 g
 
+#----------------------------------------------------------------------------
 
+# 테마 : 그래프 전체의 느낌을 바꿀 수 있어요
+install.packages("ggthemes")
+library(ggthemes)
 
+g2 <- ggplot(diamonds, aes(x = carat, y = price))+ 
+  geom_point(aes(color = color))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+g2 + theme_economist() + scale_color_economist()
+g2 + theme_excel_new() + scale_color_excel_new()
+g2 + theme_tufte()
