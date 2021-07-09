@@ -3,11 +3,11 @@ install.packages("readxl")
 library(readxl)
 
 # source("data_ex.xlsx")
-ex_data <- read_excel("dist/data_ex.xlsx") # 상대참조
+ex_data <- read_excel("dist/data_ex.xlsx") # 상대 경로
 ex_data
 
 
-# 절대 참조
+# 절대 경로
 ex_data <- read_excel("C:/Users/user/Documents/GitHub/R_language/전역강.step07_datacollection/dist/data_ex.xlsx")
 class(ex_data)
 
@@ -36,9 +36,4 @@ View(ex1_data)
 varname <- c("아이디", "성별", "나이", "지역")
 ex2_data <- read.table("dist/data_ex2.txt", sep = ",", col.names = varname)
 View(ex2_data)
-
-
-
-
-
 
